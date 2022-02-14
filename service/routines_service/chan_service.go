@@ -54,7 +54,6 @@ func (s *Service) removeRoutine(r *goRoutine) {
 	s.mux.Lock()
 	defer s.mux.Unlock()
 	delete(s.routines, r.id)
-	fmt.Println(s.routines)
 }
 
 func (s *Service) startRoutine(r *goRoutine) {
